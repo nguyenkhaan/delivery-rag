@@ -19,6 +19,5 @@ def recursive_splitter(docs):
         separators=MARKDOWN_SEPARATORS #Giup chatbot biet duoc dau la cac ki tu co the giup bat dau 1 chunk 
     ) 
     splits = text_splitter.split_documents(docs) 
-    print("Splitting result: " , splits) 
     return splits
     
