@@ -3,10 +3,8 @@ from langchain_community.document_loaders import DirectoryLoader, PyPDFLoader
 from app.utils.definitions import get_root_dir 
 
 ROOT_DIR = get_root_dir() 
-print("This is root dir", ROOT_DIR) 
 
 def directory_loader(): 
-    print(ROOT_DIR)
     loader = DirectoryLoader(
         path = str(f"{ROOT_DIR}/datas"), 
         glob = "**/*.pdf", 
@@ -15,4 +13,4 @@ def directory_loader():
         use_multithreading=True 
     )
     docs = loader.load() 
-    print(len(docs)) 
+    return docs 
